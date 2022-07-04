@@ -5,4 +5,6 @@ const rootReducer = combineReducers({
     notesReducer
 })
 
-const store
+const store = createStore(rootReducer)
+
+export default store;
