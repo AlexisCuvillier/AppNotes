@@ -5,6 +5,7 @@ import FolderIcon from "./ImgsSidebar/folder.svg";
 import Tools from "./ImgsSidebar/settings.svg";
 import Menu from "./ImgsSidebar/menu.svg";
 import "./Sidebar.css";
+import SideNotes from '../SideNotes/SideNotes'
 
 export default function () {
   const [chekWidth, setChekWidth] = useState(window.innerWidth);
@@ -48,23 +49,24 @@ export default function () {
             <div className="dot-nav d-green"></div>
           </div>
           <ul>
-            {/* <Link to="/"> */}
+            <Link to="/">
             <li>
               <img src={FolderIcon} alt="logo folder" />
             </li>
-            {/* </Link> */}
-            {/* <Link to="/"> */}
+            </Link>
+            <Link to="/edit">
             <li>
               <img src={LogoEdit} alt="logo edit" />
             </li>
-            {/* </Link> */}
-            {/* <Link to="/"> */}
+            </Link>
+            <Link to="/">
             <li>
               <img src={Tools} alt="logo tools" />
             </li>
-            {/* {/* </Link> */}
+             </Link>
           </ul>
         </div>
+        <SideNotes />
       </nav>
     </>
   );
